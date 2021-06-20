@@ -29,7 +29,7 @@ const Burger = (props) =>{
 
     // console.log(transformedArr);
     if (transformedArr.length === 0) {
-        transformedArr = <p>Please Start adding ingredients!!!</p>
+        transformedArr = <p>Please start adding ingredients!!!</p>
     }
 
     return(
