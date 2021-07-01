@@ -57,6 +57,9 @@ class BurgerBuilder extends Component{
     purchaseCancelHandler = ()=>{
         this.setState({orderble : false});
     }
+    purchaseContinue = ()=>{
+        alert('Your Order is being processed!!!');
+    }
     removeIngredientHandler = (type) =>{
         const presentCount = this.state.ingredients[type];
         if (presentCount <= 0) {
@@ -91,7 +94,12 @@ class BurgerBuilder extends Component{
             <Aux>
                 { this.state.orderble ? 
                 <Modal show={this.state.orderble} modelClosed={this.purchaseCancelHandler}>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                    <OrderSummary 
+                        ingredients={this.state.ingredients}
+                        purchaseCancel= {this.purchaseCancelHandler}
+                        purchaseContinue={this.purchaseContinue}
+                        price = {this.state.totalPrice.toFixed(2)}
+                    />
                 </Modal>
                 : <></>
                 }
