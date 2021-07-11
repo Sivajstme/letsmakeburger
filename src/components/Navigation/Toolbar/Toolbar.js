@@ -7,8 +7,10 @@ const toolbar = ()=> {
     return(
         <header className='Toolbar'>
             <div>MENU</div>
-            <Logo />
-            <nav>
+            <div className='ToolLogo'>
+                <Logo />
+            </div>
+            <nav className='DesktopOnly'>
                 <NavigationItems />
             </nav>
 
