@@ -2,11 +2,14 @@ import React from "react";
 import './Toolbar.css'
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
-const toolbar = ()=> {
+import Hamenu from '../../../assets/images/hamenu.png';
+const toolbar = (props)=> {
 
     return(
         <header className='Toolbar'>
-            <div>MENU</div>
+            <div display = {props.show} onClick={props.show} >
+                <img src={Hamenu} alt='Menu' className='hamIcon' />
+            </div>
             <div className='ToolLogo'>
                 <Logo />
             </div>
