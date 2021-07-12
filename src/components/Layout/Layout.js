@@ -14,9 +14,15 @@ class Layout extends Component{
     }
 
     sideDrawerClosedHandler= ()=>{
-        this.setState({showSide:false});
+        //console.log('object')
+        if (this.state.showSide) {
+            this.setState({showSide:false});
+        }else{
+            this.setState({showSide:true});
+        }
+        
     }
-
+    
     render(){
         return(
             <Aux>

@@ -21,15 +21,18 @@
 .ToolLogo{
     height: 80%;
 }
+.hamIcon_outer{
+    cursor: pointer;
+}
 /* .hamIcon{
     display: none;
 } */
-
+.hamIcon{
+        height: 50px;
+    }
 @media (max-width:499px) {
     .DesktopOnly{
         display: none;
     }
-    .hamIcon{
-        height: 50px;
-    }
+    
 }
