@@ -10,24 +10,25 @@ import SideDraw from '../Navigation/SideDraw/SideDrawer';
 class Layout extends Component{
 
     state = {
-        showSide : true
+        showSide : false
     }
 
     sideDrawerClosedHandler= ()=>{
         //console.log('object')
-        if (this.state.showSide) {
-            this.setState({showSide:false});
-        }else{
-            this.setState({showSide:true});
-        }
+        this.setState({showSide:false});
         
+    }
+
+    sideDrawerToggle = ()=>{
+
+        this.setState((state)=>{ return {showSide: !state.showSide}});
     }
     
     render(){
         return(
             <Aux>
                 {/* <div>Toolbar, sideDrawer, backdrop</div> */}
-                <Toolbar show={this.sideDrawerClosedHandler}/>
+                <Toolbar show={this.sideDrawerToggle}/>
                 <SideDraw open={this.state.showSide} closed= {this.sideDrawerClosedHandler}/>
                 <main className='Content'>{this.props.children}</main>
             </Aux>

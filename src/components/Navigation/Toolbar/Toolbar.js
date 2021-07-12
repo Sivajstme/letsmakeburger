@@ -10,8 +10,10 @@ const toolbar = (props)=> {
     }
     return(
         <header className='Toolbar'>
-            <div onClick={props.show} className='hamIcon_outer'>
-                <img src={Hamenu} alt='Menu' className='hamIcon' />
+            <div onClick={props.show} className='DrawerToggle'>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
             <div className='ToolLogo'>
                 <Logo />
